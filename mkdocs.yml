@@ -1,0 +1,16 @@
+site_name: NicholasChebski
+site_url: https://nicholaschebski.github.io/
+
+docs_dir: src
+site_dir: site  # его отправляем в gitignore
+
+theme:
+  name: mkdocs
+
+nav:
+  - Main: index.md
+  - Study projects: study.md
+  - Other staff: unstudy.md
+
+extra_css:
+  - css/extra.css
