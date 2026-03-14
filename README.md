@@ -2,18 +2,18 @@
 
 ## File structure
 
-NicholasChebski.github.io/
-├─ mkdocs.yml
-├─ src/
-│  ├─ index.md
-│  ├─ study.md
-│  ├─ unstudy.md
-│  ├─ css/
-│  │  └─ extra.css
-│  └─ images/
-│     └─ author.png
-├─ README.md
-└─ .gitignore
+NicholasChebski.github.io/  
+├─ mkdocs.yml  
+├─ src/  
+│  ├─ index.md  
+│  ├─ study.md  
+│  ├─ unstudy.md  
+│  ├─ css/  
+│  │  └─ extra.css  
+│  └─ images/  
+│     └─ author.png  
+├─ README.md  
+└─ .gitignore  
 ## Short description
 
 This is a SSG (Static Site Generation) for my personal website created with mkdocs and **custom emerald theme** hosted on GitHub Pages. It contains information about me, my study projects and other future works. You can check it at:
