@@ -2,7 +2,7 @@ site_name: NicholasChebski
 site_url: https://nicholaschebski.github.io/
 
 docs_dir: src
-site_dir: site  # его отправляем в gitignore
+site_dir: site
 
 theme:
   name: mkdocs
