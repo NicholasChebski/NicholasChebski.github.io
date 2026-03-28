@@ -6,12 +6,16 @@
 
     <title>{% if page and page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
 
-    <link rel="stylesheet" href="{{ base_url }}/css/vibe.css">
+    <link rel="stylesheet" href="{{ 'css/vibe.css'|url }}">
+
+    {% for path in config.extra_css %}
+    <link rel="stylesheet" href="{{ path|url }}">
+    {% endfor %}
 </head>
 <body>
     <header class="site-header">
         <div class="site-header-inner">
-            <a class="site-brand" href="{{ base_url }}/.">{{ config.site_name }}</a>
+            <a class="site-brand" href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
 
             {% if nav %}
             <nav class="site-nav">
@@ -23,7 +27,9 @@
                                 <ul class="site-subnav-list">
                                     {% for child in nav_item.children %}
                                         <li>
-                                            <a href="{{ child.url|url }}">{{ child.title }}</a>
+                                            <a href="{{ child.url|url }}" class="{% if child.active %}active{% endif %}">
+                                                {{ child.title }}
+                                            </a>
                                         </li>
                                     {% endfor %}
                                 </ul>
@@ -47,14 +53,14 @@
         <aside class="page-toc">
             <div class="toc-card">
                 <div class="toc-title">Contents</div>
-                {{ page.toc }}
+                {{ page.toc | safe }}
             </div>
         </aside>
         {% endif %}
 
         <main class="page-main">
             <div class="content-card">
-                {{ page.content }}
+                {{ page.content | safe }}
             </div>
         </main>
     </div>
