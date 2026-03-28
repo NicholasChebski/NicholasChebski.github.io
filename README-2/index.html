@@ -1,162 +1,173 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        <link rel="canonical" href="https://nicholaschebski.github.io/README-2/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Структура файлов - NicholasChebski</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../css/brands.min.css" rel="stylesheet">
-        <link href="../css/solid.min.css" rel="stylesheet">
-        <link href="../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <link href="../css/extra.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="..">NicholasChebski</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <title>Lab 2 - NicholasChebski</title>
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href=".." class="nav-link">Main</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../study/" class="nav-link">Study projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../unstudy/" class="nav-link">Other staff</a>
-                            </li>
-                        </ul>
+    <link rel="stylesheet" href="../css/vibe.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="../.">NicholasChebski</a>
 
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
+            <nav class="site-nav">
+                <ul class="site-nav-list">
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href=".." class="">
+                                    Main
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../study/" class="">
+                                    Study projects
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../unstudy/" class="">
+                                    Other staff
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-1/" class="">
+                                    Lab 1
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="./" class="active">
+                                    Lab 2
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            
         </div>
+    </header>
 
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+    <div class="page-layout">
+        
+        <aside class="page-toc">
+            <div class="toc-card">
+                <div class="toc-title">Contents</div>
+                Структура файлов - #_1
+Реализованные функции: - #_2
+    create_vector() - #create_vector
+        Что делает - #_3
+        Аргументы - #_4
+        Вывод - #_5
+        Ошибки - #_6
+    create_matrix() - #create_matrix
+        Что делает - #_7
+        Аргументы - #_8
+        Вывод - #_9
+        Ошибки - #_10
+    reshape_vector(vec: np.ndarray) - #reshape_vectorvec-npndarray
+        Что делает - #_11
+        Аргументы - #_12
+        Вывод - #_13
+        Ошибки - #_14
+    transpose_matrix(mat: np.ndarray) - #transpose_matrixmat-npndarray
+        Что делает - #_15
+        Аргументы - #_16
+        Вывод - #_17
+        Ошибки - #_18
+    vector_add(a: np.ndarray, b: np.ndarray) - #vector_adda-npndarray-b-npndarray
+        Что делает - #_19
+        Аргументы - #_20
+        Вывод - #_21
+        Ошибки - #_22
+    scalar_multiply(vec: np.ndarray, scalar: int | float) - #scalar_multiplyvec-npndarray-scalar-int-float
+        Что делает - #_23
+        Аргументы - #_24
+        Вывод - #_25
+        Ошибки - #_26
+    elementwise_multiply(a: np.ndarray, b: np.ndarray) - #elementwise_multiplya-npndarray-b-npndarray
+        Что делает - #_27
+        Аргументы - #_28
+        Вывод - #_29
+        Ошибки - #_30
+    dot_product(a: np.ndarray, b: np.ndarray) - #dot_producta-npndarray-b-npndarray
+        Что делает - #_31
+        Аргументы - #_32
+        Вывод - #_33
+        Ошибки - #_34
+    matrix_multiply(a: np.ndarray, b: np.ndarray) - #matrix_multiplya-npndarray-b-npndarray
+        Что делает - #_35
+        Аргументы - #_36
+        Вывод - #_37
+        Ошибки - #_38
+    matrix_determinant(a: np.ndarray) - #matrix_determinanta-npndarray
+        Что делает - #_39
+        Аргументы - #_40
+        Вывод - #_41
+        Ошибки - #_42
+    matrix_inverse(a: np.ndarray) - #matrix_inversea-npndarray
+        Что делает - #_43
+        Аргументы - #_44
+        Вывод - #_45
+        Ошибки - #_46
+    solve_linear_system(a: np.ndarray, b: np.ndarray) - #solve_linear_systema-npndarray-b-npndarray
+        Что делает - #_47
+        Аргументы - #_48
+        Вывод - #_49
+        Ошибки - #_50
+    load_dataset(path: str = "data/students_scores.csv") - #load_datasetpath-str-datastudents_scorescsv
+        Что делает - #_51
+        Аргументы - #_52
+        Вывод - #_53
+        Ошибки - #_54
+    statistical_analysis(data: np.ndarray) - #statistical_analysisdata-npndarray
+        Что делает - #_55
+        Аргументы - #_56
+        Вывод - #_57
+        Ошибки - #_58
+    normalize_data(data: np.ndarray) - #normalize_datadata-npndarray
+        Что делает - #_59
+        Аргументы - #_60
+        Вывод - #_61
+        Ошибки - #_62
+    plot_histogram(data: np.ndarray) - #plot_histogramdata-npndarray
+        Что делает - #_63
+        Аргументы - #_64
+        Вывод - #_65
+        Ошибки - #_66
+    plot_heatmap(matrix: np.ndarray) - #plot_heatmapmatrix-npndarray
+        Что делает - #_67
+        Аргументы - #_68
+        Вывод - #_69
+        Ошибки - #_70
+    plot_line(x: np.ndarray, y: np.ndarray) - #plot_linex-npndarray-y-npndarray
+        Что делает - #_71
+        Аргументы - #_72
+        Вывод - #_73
+        Ошибки - #_74
 
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Структура файлов</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#_2" class="nav-link">Реализованные функции:</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#create_vector" class="nav-link">create_vector()</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#create_matrix" class="nav-link">create_matrix()</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#reshape_vectorvec-npndarray" class="nav-link">reshape_vector(vec: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#transpose_matrixmat-npndarray" class="nav-link">transpose_matrix(mat: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#vector_adda-npndarray-b-npndarray" class="nav-link">vector_add(a: np.ndarray, b: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#scalar_multiplyvec-npndarray-scalar-int-float" class="nav-link">scalar_multiply(vec: np.ndarray, scalar: int | float)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#elementwise_multiplya-npndarray-b-npndarray" class="nav-link">elementwise_multiply(a: np.ndarray, b: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#dot_producta-npndarray-b-npndarray" class="nav-link">dot_product(a: np.ndarray, b: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#matrix_multiplya-npndarray-b-npndarray" class="nav-link">matrix_multiply(a: np.ndarray, b: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#matrix_determinanta-npndarray" class="nav-link">matrix_determinant(a: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#matrix_inversea-npndarray" class="nav-link">matrix_inverse(a: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#solve_linear_systema-npndarray-b-npndarray" class="nav-link">solve_linear_system(a: np.ndarray, b: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#load_datasetpath-str-datastudents_scorescsv" class="nav-link">load_dataset(path: str = "data/students_scores.csv")</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#statistical_analysisdata-npndarray" class="nav-link">statistical_analysis(data: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#normalize_datadata-npndarray" class="nav-link">normalize_data(data: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#plot_histogramdata-npndarray" class="nav-link">plot_histogram(data: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#plot_heatmapmatrix-npndarray" class="nav-link">plot_heatmap(matrix: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#plot_linex-npndarray-y-npndarray" class="nav-link">plot_line(x: np.ndarray, y: np.ndarray)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+            </div>
+        </aside>
+        
 
-<h1 id="_1">Структура файлов</h1>
+        <main class="page-main">
+            <div class="content-card">
+                <h1 id="_1">Структура файлов</h1>
 <p>Using_NumPy/<br />
 ├── main.py - файл со всеми функциями<br />
 ├── test.py - файл со всеми тестами<br />
@@ -432,82 +443,15 @@
 <li>InputError - если хотя бы один из массивов пуст</li>
 <li>InputError - если хотя бы один из массивов не является одномерным</li>
 <li>InputError - если массивы имеют разную длину</li>
-</ul></div>
+</ul>
             </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+        </main>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
 
-    </body>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <span>NicholasChebski</span>
+        </div>
+    </footer>
+</body>
 </html>
