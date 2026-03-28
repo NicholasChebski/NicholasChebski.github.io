@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>{% if page and page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+
+    <link rel="stylesheet" href="{{ base_url }}/css/vibe.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="{{ base_url }}/.">{{ config.site_name }}</a>
+
+            {% if nav %}
+            <nav class="site-nav">
+                <ul class="site-nav-list">
+                    {% for nav_item in nav %}
+                        {% if nav_item.children %}
+                            <li class="site-nav-item">
+                                <span class="site-nav-label">{{ nav_item.title }}</span>
+                                <ul class="site-subnav-list">
+                                    {% for child in nav_item.children %}
+                                        <li>
+                                            <a href="{{ child.url|url }}">{{ child.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li class="site-nav-item">
+                                <a href="{{ nav_item.url|url }}" class="{% if nav_item.active %}active{% endif %}">
+                                    {{ nav_item.title }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="page-layout">
+        {% if page and page.toc %}
+        <aside class="page-toc">
+            <div class="toc-card">
+                <div class="toc-title">Contents</div>
+                {{ page.toc }}
+            </div>
+        </aside>
+        {% endif %}
+
+        <main class="page-main">
+            <div class="content-card">
+                {{ page.content }}
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <span>{{ config.site_name }}</span>
+        </div>
+    </footer>
+</body>
+</html>
