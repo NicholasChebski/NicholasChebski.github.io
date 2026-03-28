@@ -5,12 +5,18 @@ docs_dir: src
 site_dir: site
 
 theme:
-  name: mkdocs
+  name: null
+  custom_dir: vibe_theme/
+
+watch:
+  - vibe_theme
 
 nav:
   - Main: index.md
   - Study projects: study.md
   - Other staff: unstudy.md
+  - Lab 1: README-1.md
+  - Lab 2: README-2.md
 
 extra_css:
   - css/extra.css
