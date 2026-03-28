@@ -163,11 +163,17 @@ a {
   margin: 0;
 }
 
+.toc-card li {
+  display: block;
+  margin: 0;
+}
+
 .toc-card li + li {
   margin-top: 8px;
 }
 
 .toc-card a {
+  display: block;
   text-decoration: none;
   color: var(--dark-text);
 }
