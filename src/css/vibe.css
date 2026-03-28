@@ -114,7 +114,8 @@ a {
   color: var(--dark-text);
 }
 
-.site-subnav-list a:hover {
+.site-subnav-list a:hover,
+.site-subnav-list a.active {
   background: rgba(0, 0, 0, 0.06);
 }
 
