@@ -13,6 +13,24 @@
     {% endfor %}
 </head>
 <body>
+    {% macro render_toc(items) %}
+        {% if items %}
+        <ul class="toc-list">
+            {% for toc_item in items %}
+                <li class="toc-item">
+                    <a class="toc-link" href="{{ toc_item.url }}">
+                        {{ toc_item.title|safe }}
+                    </a>
+
+                    {% if toc_item.children %}
+                        {{ render_toc(toc_item.children) }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endmacro %}
+
     <header class="site-header">
         <div class="site-header-inner">
             <a class="site-brand" href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
@@ -53,14 +71,14 @@
         <aside class="page-toc">
             <div class="toc-card">
                 <div class="toc-title">Contents</div>
-                {{ page.toc | safe }}
+                {{ render_toc(page.toc) }}
             </div>
         </aside>
         {% endif %}
 
         <main class="page-main">
             <div class="content-card">
-                {{ page.content | safe }}
+                {{ page.content }}
             </div>
         </main>
     </div>
