@@ -157,28 +157,28 @@ a {
   margin-bottom: 12px;
 }
 
-.toc-card ul {
+.toc-list {
   list-style: none;
-  padding-left: 0;
   margin: 0;
+  padding: 0;
 }
 
-.toc-card li {
-  display: block;
-  margin: 0;
+.toc-list .toc-list {
+  margin-top: 8px;
+  padding-left: 16px;
 }
 
-.toc-card li + li {
+.toc-item + .toc-item {
   margin-top: 8px;
 }
 
-.toc-card a {
+.toc-link {
   display: block;
   text-decoration: none;
   color: var(--dark-text);
 }
 
-.toc-card a:hover {
+.toc-link:hover {
   color: var(--btn-green);
 }
 
