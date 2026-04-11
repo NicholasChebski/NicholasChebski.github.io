@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Lab 2 - NicholasChebski</title>
+
+    <link rel="stylesheet" href="../css/vibe.css">
+
+    
+</head>
+<body>
+    
+
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="..">NicholasChebski</a>
+
+            
+            <nav class="site-nav">
+                <ul class="site-nav-list">
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href=".." class="">
+                                    Main
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../study/" class="">
+                                    Study projects
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../unstudy/" class="">
+                                    Other staff
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-1/" class="">
+                                    Lab 1
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="./" class="active">
+                                    Lab 2
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-3/" class="">
+                                    Lab 3
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-4/" class="">
+                                    Lab 4
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-5/" class="">
+                                    Lab 5
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <div class="page-layout">
+        
+        <aside class="page-toc">
+            <div class="toc-card">
+                <div class="toc-title">Contents</div>
+                
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_1">
+                        Структура файлов
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_2">
+                        Реализованные функции:
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#create_vector">
+                        create_vector()
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_3">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_4">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_5">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_6">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#create_matrix">
+                        create_matrix()
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_7">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_8">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_9">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_10">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#reshape_vectorvec-npndarray">
+                        reshape_vector(vec: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_11">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_12">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_13">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_14">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#transpose_matrixmat-npndarray">
+                        transpose_matrix(mat: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_15">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_16">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_17">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_18">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#vector_adda-npndarray-b-npndarray">
+                        vector_add(a: np.ndarray, b: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_19">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_20">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_21">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_22">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#scalar_multiplyvec-npndarray-scalar-int-float">
+                        scalar_multiply(vec: np.ndarray, scalar: int | float)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_23">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_24">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_25">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_26">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#elementwise_multiplya-npndarray-b-npndarray">
+                        elementwise_multiply(a: np.ndarray, b: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_27">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_28">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_29">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_30">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#dot_producta-npndarray-b-npndarray">
+                        dot_product(a: np.ndarray, b: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_31">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_32">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_33">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_34">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#matrix_multiplya-npndarray-b-npndarray">
+                        matrix_multiply(a: np.ndarray, b: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_35">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_36">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_37">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_38">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#matrix_determinanta-npndarray">
+                        matrix_determinant(a: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_39">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_40">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_41">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_42">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#matrix_inversea-npndarray">
+                        matrix_inverse(a: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_43">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_44">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_45">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_46">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#solve_linear_systema-npndarray-b-npndarray">
+                        solve_linear_system(a: np.ndarray, b: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_47">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_48">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_49">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_50">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#load_datasetpath-str-datastudents_scorescsv">
+                        load_dataset(path: str = "data/students_scores.csv")
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_51">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_52">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_53">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_54">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#statistical_analysisdata-npndarray">
+                        statistical_analysis(data: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_55">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_56">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_57">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_58">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#normalize_datadata-npndarray">
+                        normalize_data(data: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_59">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_60">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_61">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_62">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#plot_histogramdata-npndarray">
+                        plot_histogram(data: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_63">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_64">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_65">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_66">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#plot_heatmapmatrix-npndarray">
+                        plot_heatmap(matrix: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_67">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_68">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_69">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_70">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#plot_linex-npndarray-y-npndarray">
+                        plot_line(x: np.ndarray, y: np.ndarray)
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_71">
+                        Что делает
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_72">
+                        Аргументы
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_73">
+                        Вывод
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_74">
+                        Ошибки
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+        </ul>
+        
+    
+            </div>
+        </aside>
+        
+
+        <main class="page-main">
+            <div class="content-card">
+                <h1 id="_1">Структура файлов</h1>
+<p>Using_NumPy/<br />
+├── main.py - файл со всеми функциями<br />
+├── test.py - файл со всеми тестами<br />
+├── exceptions.py - <strong>опционально</strong>, особые исключения<br />
+├── data/ - базы данных<br />
+│ └── students_scores.csv - база данных с оценками студентов<br />
+└── plots/ - визуализации</p>
+<h1 id="_2">Реализованные функции:</h1>
+<h2 id="create_vector">create_vector()</h2>
+<h3 id="_3">Что делает</h3>
+<p>Создаёт одномерный массив NumPy с числами от 0 до 9 включительно.</p>
+<h3 id="_4">Аргументы</h3>
+<p>У данной функции нет аргументов.</p>
+<h3 id="_5">Вывод</h3>
+<p>Возвращает одномерный массив чисел от 0 до 9 (numpy.ndarray).</p>
+<h3 id="_6">Ошибки</h3>
+<p>Данная функция не выдаёт ошибок.</p>
+<h2 id="create_matrix">create_matrix()</h2>
+<h3 id="_7">Что делает</h3>
+<p>Создаёт матрицу размера 5 x 5, заполненную случайными вещественными числами из диапазона [0, 1).</p>
+<h3 id="_8">Аргументы</h3>
+<p>У данной функции нет аргументов.</p>
+<h3 id="_9">Вывод</h3>
+<p>Возвращает матрицу размера 5 x 5 со случайными значениями (numpy.ndarray).</p>
+<h3 id="_10">Ошибки</h3>
+<p>Данная функция не выдаёт ошибок.</p>
+<h2 id="reshape_vectorvec-npndarray">reshape_vector(vec: np.ndarray)</h2>
+<h3 id="_11">Что делает</h3>
+<p>Преобразует одномерный массив из 10 элементов в матрицу размера 2 x 5.</p>
+<h3 id="_12">Аргументы</h3>
+<ul>
+<li>vec - входной массив типа np.ndarray, который должен быть одномерным и содержать ровно 10 элементов.</li>
+</ul>
+<h3 id="_13">Вывод</h3>
+<p>Возвращает преобразованный массив формы размера 2 x 5 (numpy.ndarray).</p>
+<h3 id="_14">Ошибки</h3>
+<ul>
+<li>InputError - если vec не имеет тип numpy.ndarray</li>
+<li>InputError - если vec не является одномерным массивом</li>
+<li>InputError - если vec не содержит ровно 10 элементов</li>
+</ul>
+<h2 id="transpose_matrixmat-npndarray">transpose_matrix(mat: np.ndarray)</h2>
+<h3 id="_15">Что делает</h3>
+<p>Выполняет транспонирование матрицы, то есть меняет строки и столбцы местами.</p>
+<h3 id="_16">Аргументы</h3>
+<ul>
+<li>mat - входная матрица типа np.ndarray, которая должна быть двумерной.</li>
+</ul>
+<h3 id="_17">Вывод</h3>
+<p>Возвращает транспонированную матрицу (numpy.ndarray).</p>
+<h3 id="_18">Ошибки</h3>
+<ul>
+<li>InputError - если mat не имеет тип numpy.ndarray</li>
+<li>InputError - если mat не является двумерным массивом</li>
+</ul>
+<h2 id="vector_adda-npndarray-b-npndarray">vector_add(a: np.ndarray, b: np.ndarray)</h2>
+<h3 id="_19">Что делает</h3>
+<p>Выполняет поэлементное сложение двух векторов одинаковой длины.</p>
+<h3 id="_20">Аргументы</h3>
+<ul>
+<li>a - первый вектор типа np.ndarray, должен быть одномерным</li>
+<li>b - второй вектор типа np.ndarray, должен быть одномерным</li>
+</ul>
+<h3 id="_21">Вывод</h3>
+<p>Возвращает результат поэлементного сложения векторов (numpy.ndarray).</p>
+<h3 id="_22">Ошибки</h3>
+<ul>
+<li>InputError - если хотя бы один из аргументов не имеет тип numpy.ndarray</li>
+<li>InputError - если хотя бы один из аргументов не является одномерным массивом</li>
+<li>InputError - если векторы имеют разную длину</li>
+</ul>
+<h2 id="scalar_multiplyvec-npndarray-scalar-int-float">scalar_multiply(vec: np.ndarray, scalar: int | float)</h2>
+<h3 id="_23">Что делает</h3>
+<p>Умножает все элементы вектора на заданное число.</p>
+<h3 id="_24">Аргументы</h3>
+<ul>
+<li>vec - входной вектор типа np.ndarray, должен быть одномерным</li>
+<li>scalar - число типа int или float</li>
+</ul>
+<h3 id="_25">Вывод</h3>
+<p>Возвращает результат умножения вектора на скаляр (numpy.ndarray).</p>
+<h3 id="_26">Ошибки</h3>
+<ul>
+<li>InputError - если vec не имеет тип numpy.ndarray</li>
+<li>InputError - если vec не является одномерным массивом</li>
+<li>InputError - если scalar не является числом</li>
+</ul>
+<h2 id="elementwise_multiplya-npndarray-b-npndarray">elementwise_multiply(a: np.ndarray, b: np.ndarray)</h2>
+<h3 id="_27">Что делает</h3>
+<p>Выполняет поэлементное умножение двух массивов одинаковой формы.</p>
+<h3 id="_28">Аргументы</h3>
+<ul>
+<li>a - первый массив типа np.ndarray</li>
+<li>b - второй массив типа np.ndarray</li>
+</ul>
+<h3 id="_29">Вывод</h3>
+<p>Возвращает результат поэлементного умножения массивов (numpy.ndarray).</p>
+<h3 id="_30">Ошибки</h3>
+<ul>
+<li>InputError - если хотя бы один из аргументов не имеет тип numpy.ndarray</li>
+<li>InputError - если массивы имеют разную форму</li>
+</ul>
+<h2 id="dot_producta-npndarray-b-npndarray">dot_product(a: np.ndarray, b: np.ndarray)</h2>
+<h3 id="_31">Что делает</h3>
+<p>Вычисляет скалярное произведение двух векторов.</p>
+<h3 id="_32">Аргументы</h3>
+<ul>
+<li>a - первый вектор типа np.ndarray, должен быть одномерным</li>
+<li>b - второй вектор типа np.ndarray, должен быть одномерным</li>
+</ul>
+<h3 id="_33">Вывод</h3>
+<p>Возвращает скалярное произведение векторов (float | numpy.ndarray).</p>
+<h3 id="_34">Ошибки</h3>
+<ul>
+<li>InputError - если хотя бы один из аргументов не имеет тип numpy.ndarray</li>
+<li>InputError - если хотя бы один из аргументов не является одномерным массивом</li>
+<li>InputError - если векторы имеют разную длину</li>
+</ul>
+<h2 id="matrix_multiplya-npndarray-b-npndarray">matrix_multiply(a: np.ndarray, b: np.ndarray)</h2>
+<h3 id="_35">Что делает</h3>
+<p>Выполняет умножение двух матриц.</p>
+<h3 id="_36">Аргументы</h3>
+<ul>
+<li>a - первая матрица типа np.ndarray, должна быть двумерной</li>
+<li>b - вторая матрица типа np.ndarray, должна быть двумерной</li>
+</ul>
+<h3 id="_37">Вывод</h3>
+<p>Возвращает результат умножения матриц (numpy.ndarray).</p>
+<h3 id="_38">Ошибки</h3>
+<ul>
+<li>InputError - если хотя бы одна из матриц не имеет тип numpy.ndarray</li>
+<li>InputError - если хотя бы одна из матриц не является двумерным массивом</li>
+<li>InputError - если число столбцов первой матрицы не совпадает с числом строк второй</li>
+</ul>
+<h2 id="matrix_determinanta-npndarray">matrix_determinant(a: np.ndarray)</h2>
+<h3 id="_39">Что делает</h3>
+<p>Вычисляет определитель квадратной матрицы.</p>
+<h3 id="_40">Аргументы</h3>
+<ul>
+<li>a - матрица типа np.ndarray, должна быть двумерной и квадратной</li>
+</ul>
+<h3 id="_41">Вывод</h3>
+<p>Возвращает определитель матрицы (float).</p>
+<h3 id="_42">Ошибки</h3>
+<ul>
+<li>InputError - если a не имеет тип numpy.ndarray</li>
+<li>InputError - если a не является двумерным массивом</li>
+<li>InputError - если a не является квадратной матрицей</li>
+</ul>
+<h2 id="matrix_inversea-npndarray">matrix_inverse(a: np.ndarray)</h2>
+<h3 id="_43">Что делает</h3>
+<p>Находит обратную матрицу для заданной квадратной матрицы.</p>
+<h3 id="_44">Аргументы</h3>
+<ul>
+<li>a - матрица типа np.ndarray, должна быть двумерной и квадратной</li>
+</ul>
+<h3 id="_45">Вывод</h3>
+<p>Возвращает обратную матрицу (numpy.ndarray).</p>
+<h3 id="_46">Ошибки</h3>
+<ul>
+<li>InputError - если a не имеет тип numpy.ndarray</li>
+<li>InputError - если a не является двумерным массивом</li>
+<li>InputError - если a не является квадратной матрицей</li>
+<li>LogicalError - если матрица является вырожденной</li>
+</ul>
+<h2 id="solve_linear_systema-npndarray-b-npndarray">solve_linear_system(a: np.ndarray, b: np.ndarray)</h2>
+<h3 id="_47">Что делает</h3>
+<p>Решает систему линейных уравнений вида Ax = b.</p>
+<h3 id="_48">Аргументы</h3>
+<ul>
+<li>a - матрица коэффициентов типа np.ndarray, должна быть двумерной и квадратной</li>
+<li>b - вектор свободных членов типа np.ndarray, должен быть одномерным</li>
+</ul>
+<h3 id="_49">Вывод</h3>
+<p>Возвращает решение системы (numpy.ndarray).</p>
+<h3 id="_50">Ошибки</h3>
+<ul>
+<li>InputError - если a или b не имеют тип numpy.ndarray</li>
+<li>InputError - если a не является двумерным массивом</li>
+<li>InputError - если b не является одномерным массивом</li>
+<li>InputError - если a не является квадратной матрицей</li>
+<li>InputError - если размер b не совпадает с числом строк матрицы a</li>
+</ul>
+<h2 id="load_datasetpath-str-datastudents_scorescsv">load_dataset(path: str = "data/students_scores.csv")</h2>
+<h3 id="_51">Что делает</h3>
+<p>Загружает CSV-файл и преобразует его содержимое в массив NumPy.</p>
+<h3 id="_52">Аргументы</h3>
+<ul>
+<li>path - путь к CSV-файлу, должен быть строкой</li>
+</ul>
+<h3 id="_53">Вывод</h3>
+<p>Возвращает данные из CSV-файла (numpy.ndarray).</p>
+<h3 id="_54">Ошибки</h3>
+<ul>
+<li>InputError - если path не является строкой</li>
+<li>InputError - если файл по указанному пути не найден</li>
+<li>InputError - если CSV-файл пуст</li>
+</ul>
+<h2 id="statistical_analysisdata-npndarray">statistical_analysis(data: np.ndarray)</h2>
+<h3 id="_55">Что делает</h3>
+<p>Вычисляет основные статистические характеристики одномерного массива данных: среднее значение, медиану, стандартное отклонение, минимум, максимум, 25-й и 75-й перцентили.</p>
+<h3 id="_56">Аргументы</h3>
+<ul>
+<li>data - одномерный массив типа np.ndarray</li>
+</ul>
+<h3 id="_57">Вывод</h3>
+<p>Возвращает словарь со статистическими характеристиками (dict): mean, median, std, min, max, percentile_25, percentile_75.</p>
+<h3 id="_58">Ошибки</h3>
+<ul>
+<li>InputError - если data не имеет тип numpy.ndarray</li>
+<li>InputError - если массив data пустой</li>
+<li>InputError - если data не является одномерным массивом</li>
+</ul>
+<h2 id="normalize_datadata-npndarray">normalize_data(data: np.ndarray)</h2>
+<h3 id="_59">Что делает</h3>
+<p>Выполняет Min-Max нормализацию массива по формуле:</p>
+<p>(x - min) / (max - min)</p>
+<h3 id="_60">Аргументы</h3>
+<ul>
+<li>data - входной массив типа np.ndarray</li>
+</ul>
+<h3 id="_61">Вывод</h3>
+<p>Возвращает нормализованный массив со значениями от 0 до 1 (numpy.ndarray).</p>
+<h3 id="_62">Ошибки</h3>
+<ul>
+<li>InputError - если data не имеет тип numpy.ndarray</li>
+<li>InputError - если массив data пустой</li>
+<li>LogicalError - если все значения массива одинаковы</li>
+</ul>
+<h2 id="plot_histogramdata-npndarray">plot_histogram(data: np.ndarray)</h2>
+<h3 id="_63">Что делает</h3>
+<p>Строит гистограмму распределения данных и сохраняет её в файл.</p>
+<h3 id="_64">Аргументы</h3>
+<ul>
+<li>data - одномерный массив типа np.ndarray</li>
+</ul>
+<h3 id="_65">Вывод</h3>
+<p>Ничего не возвращает. Сохраняет изображение гистограммы в файл.</p>
+<h3 id="_66">Ошибки</h3>
+<ul>
+<li>InputError - если data не имеет тип numpy.ndarray</li>
+<li>InputError - если массив data пустой</li>
+<li>InputError - если data не является одномерным массивом</li>
+</ul>
+<h2 id="plot_heatmapmatrix-npndarray">plot_heatmap(matrix: np.ndarray)</h2>
+<h3 id="_67">Что делает</h3>
+<p>Строит тепловую карту по переданной матрице и сохраняет её в файл.</p>
+<h3 id="_68">Аргументы</h3>
+<ul>
+<li>matrix - матрица типа np.ndarray, должна быть двумерной</li>
+</ul>
+<h3 id="_69">Вывод</h3>
+<p>Ничего не возвращает. Сохраняет изображение тепловой карты в файл.</p>
+<h3 id="_70">Ошибки</h3>
+<ul>
+<li>InputError - если matrix не имеет тип numpy.ndarray</li>
+<li>InputError - если matrix - пустая матрица</li>
+<li>InputError - если matrix не является двумерным массивом</li>
+</ul>
+<h2 id="plot_linex-npndarray-y-npndarray">plot_line(x: np.ndarray, y: np.ndarray)</h2>
+<h3 id="_71">Что делает</h3>
+<p>Строит линейный график зависимости значений y от значений x и сохраняет его в файл.</p>
+<h3 id="_72">Аргументы</h3>
+<ul>
+<li>x - одномерный массив типа np.ndarray</li>
+<li>y - одномерный массив типа np.ndarray</li>
+</ul>
+<h3 id="_73">Вывод</h3>
+<p>Ничего не возвращает. Сохраняет изображение линейного графика в файл.</p>
+<h3 id="_74">Ошибки</h3>
+<ul>
+<li>InputError - если хотя бы один из массивов не имеет тип numpy.ndarray</li>
+<li>InputError - если хотя бы один из массивов пуст</li>
+<li>InputError - если хотя бы один из массивов не является одномерным</li>
+<li>InputError - если массивы имеют разную длину</li>
+</ul>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <span>NicholasChebski</span>
+        </div>
+    </footer>
+</body>
+</html>

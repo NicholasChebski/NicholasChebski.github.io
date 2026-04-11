@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Lab 5 - NicholasChebski</title>
+
+    <link rel="stylesheet" href="../css/vibe.css">
+
+    
+</head>
+<body>
+    
+
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="..">NicholasChebski</a>
+
+            
+            <nav class="site-nav">
+                <ul class="site-nav-list">
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href=".." class="">
+                                    Main
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../study/" class="">
+                                    Study projects
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../unstudy/" class="">
+                                    Other staff
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-1/" class="">
+                                    Lab 1
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-2/" class="">
+                                    Lab 2
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-3/" class="">
+                                    Lab 3
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-4/" class="">
+                                    Lab 4
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="./" class="active">
+                                    Lab 5
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <div class="page-layout">
+        
+        <aside class="page-toc">
+            <div class="toc-card">
+                <div class="toc-title">Contents</div>
+                
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#no5">
+                        Лабораторная работа №5
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_1">
+                        Сведения об авторе:
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_2">
+                        Краткая сводка по работе
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_3">
+                        Выполнение работы
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+        </ul>
+        
+    
+            </div>
+        </aside>
+        
+
+        <main class="page-main">
+            <div class="content-card">
+                <h1 id="no5">Лабораторная работа №5</h1>
+<h2 id="_1">Сведения об авторе:</h2>
+<p><strong>ФИО</strong>: Окунев Никита Дмитриевич
+<strong>Группа</strong>: P3122</p>
+<hr />
+<h2 id="_2">Краткая сводка по работе</h2>
+<p>В данной лабораторной работе было реализовано обучение моделей <strong>линейной регрессии</strong> и <strong>случайного леса</strong> на обучающем датасете, были произведены замеры точности модели на тестовом датасете, а также была подобрана модель, получающая более высокие результаты точности, <strong>градиентный бустинг</strong>. Также были подобраны параметры для случайного леса, позволяющие получить небольшой отрицательный прирост в ошибках <strong>MAE</strong> и <strong>RMSE</strong>. Также был изложен алгоритм для интеграции обученной модели внутрь веб-сервиса.</p>
+<hr />
+<h2 id="_3">Выполнение работы</h2>
+<ol>
+<li>Ссылка на борд: https://colab.research.google.com/drive/1tKFksigYHSXqGoOC16sfUgNTTxt8Gwxu?usp=sharing<ul>
+<li>В борде были заполнены все пропуски</li>
+<li>Было выполнено дополнительное задание: выявление важных признаков</li>
+<li>Были подобраны параметры модели градиентного бустинга, повышающие точность модели</li>
+<li>Дополнительно были использованы модели перцептрона и градиентного бустинга</li>
+<li>Градиентный бустинг получил большую точность, чем случайный лес</li>
+</ul>
+</li>
+<li>Пошаговый алгоритм:
+    Предположим, что у нас есть обученная модель, которая может предсказывать (оценивать) стоимость недвижимости по показателям и веб-сервис компании, которая предоставляет услугу оценки недвижимости, который позволяет оценить недвижимость онлайн. <ol>
+<li>При выборе на веб-сервисе опции "оценить", человек должен быть перенаправлен на страницу ввода данных, где он должен будет ввести все необходимые данные о недвижимости.</li>
+<li>После этого система подаёт данные на анализ модели, которая выдаёт цену, в которую оценивает эту недвижимость. 
+<strong>Данный сервис будет полезен как для продавцов недвижимости, так и для покупателей, поскольку будет давать точную, справедливую и независимую оценку</strong>
+Если в постановке задачи имелась архитектура MVC, то во View добавится одна или несколько страниц с анкетой и страницы с результатом, а в Controller добавится анализ данных и определение стоимости недвижимости (прогноз модели). Модель при этом будет частью Model.</li>
+</ol>
+</li>
+</ol>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <span>NicholasChebski</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Lab 3 - NicholasChebski</title>
+
+    <link rel="stylesheet" href="../css/vibe.css">
+
+    
+</head>
+<body>
+    
+
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="..">NicholasChebski</a>
+
+            
+            <nav class="site-nav">
+                <ul class="site-nav-list">
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href=".." class="">
+                                    Main
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../study/" class="">
+                                    Study projects
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../unstudy/" class="">
+                                    Other staff
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-1/" class="">
+                                    Lab 1
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-2/" class="">
+                                    Lab 2
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="./" class="active">
+                                    Lab 3
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-4/" class="">
+                                    Lab 4
+                                </a>
+                            </li>
+                        
+                    
+                        
+                            <li class="site-nav-item">
+                                <a href="../README-5/" class="">
+                                    Lab 5
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <div class="page-layout">
+        
+        <aside class="page-toc">
+            <div class="toc-card">
+                <div class="toc-title">Contents</div>
+                
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#no3">
+                        Лабораторная работа №3
+                    </a>
+
+                    
+                        
+        
+        <ul class="toc-list">
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_1">
+                        Сведения об авторе:
+                    </a>
+
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_2">
+                        Краткая сводка по работе
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+                    
+                </li>
+            
+                <li class="toc-item">
+                    <a class="toc-link" href="#_3">
+                        Выполнение работы
+                    </a>
+
+                    
+                </li>
+            
+        </ul>
+        
+    
+            </div>
+        </aside>
+        
+
+        <main class="page-main">
+            <div class="content-card">
+                <h1 id="no3">Лабораторная работа №3</h1>
+<h2 id="_1">Сведения об авторе:</h2>
+<p><strong>ФИО</strong>: Окунев Никита Дмитриевич
+<strong>Группа</strong>: P3122</p>
+<hr />
+<h2 id="_2">Краткая сводка по работе</h2>
+<p>Был сделан деплой статического сайта на SourceCraft при помощи ci.yaml и sites.yaml, а также деплой на GitHub при помощи GitHub Actions. Теперь, при пуше в репозиторий, сайт автоматически собирается и публикуется.</p>
+<hr />
+<h1 id="_3">Выполнение работы</h1>
+<ol>
+<li>Был реализован сценарий автоматического развёртывания статического сайта на SourceCraft</li>
+<li>Был реализован сценарий автоматического развёртывания статического сайта на GitHub при помощи GitHub Actions</li>
+<li>Демонстрация результатов выполнения:<ol>
+<li>Сайт на SourceCraft<ul>
+<li>Репозиторий: https://sourcecraft.dev/chebskigroup/personalsite/</li>
+<li>Сайт: https://chebskigroup.sourcecraft.site/personalsite/</li>
+</ul>
+</li>
+<li>Сайт на GitHub<ul>
+<li>Репозиторий: https://github.com/NicholasChebski/NicholasChebski.github.io</li>
+<li>Сайт: https://nicholaschebski.github.io/</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Как был реализован деплой:<ul>
+<li>Деплой на SourceCraft:<ol>
+<li>Были созданы файлы ci.yaml и sites.yaml в папке .sourcecraft/</li>
+<li>В файле sites.yaml были прописаны ветка, из которой воркер клонирует репозиторий, и ветка, в которую ci пушит</li>
+<li>В файле ci.yaml были прописаны таски, которые воркер делает для деплоя сайта</li>
+<li>Также был создан файл requirements.txt для необходимых для установки модулей python (mkdocs)</li>
+</ol>
+</li>
+<li>Деплой на GitHub:<ol>
+<li>Был создан файл deploy-release.yaml внутри папки .workflows/, находящейся внутри папки .guthub/</li>
+<li>Внутри файла deploy-release.yaml были прописаны таски, которые воркер делает для деплоя сайта</li>
+<li>Также был создан файл requirements.txt для необходимых для установки модулей python (mkdocs)</li>
+<li>Для воркера был создан токен, который хранится в secrets репозитория, который позволяет ему читать репозиторий и пушить в него</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <span>NicholasChebski</span>
+        </div>
+    </footer>
+</body>
+</html>
