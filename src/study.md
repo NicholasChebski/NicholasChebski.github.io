@@ -15,6 +15,11 @@
       </a>
     </li>
     <li>
+      <a class="lab-button lab-button-block" href="../README-3/">
+        Deploy on SourceCraft/GitHub Actions
+      </a>
+    </li>
+    <li>
       <a class="lab-button lab-button-block" href="../README-4/">
         Classification
       </a>
