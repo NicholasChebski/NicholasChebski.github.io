@@ -20,5 +20,10 @@
       </a>
     </li>
     <li>
+      <a class="lab-button lab-button-block" href="../README-5/">
+        Regression
+      </a>
+    </li>
+    <li>
   </ol>
 </div>
